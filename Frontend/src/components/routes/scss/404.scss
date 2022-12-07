@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap');
+
 .container404{
   width:100vw;
   height:100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Pontano Sans', sans-serif;
   position: relative;
   left:6vmin;
   text-align: center;
@@ -106,10 +108,9 @@ h1{
 }
 
 .wrong-para{
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Pontano Sans', sans-serif;
   position: absolute;
   bottom:15vmin;
   padding:3vmin 12vmin 3vmin 3vmin;
-  font-weight:600;
   color:#092532;
 }

@@ -20,7 +20,7 @@ export default function InicioSesion() {
                         </Card.Footer>
                     </Card>
                 </Col>
-                <Col className="responsiveImg responsiveImgPhone">
+                <Col className="responsiveImg .d-none .d-sm-block">
                     <img src="https://mdbootstrap.com/img/new/ecommerce/vertical/004.jpg" className="w-100 rounded shadow imgPadding img-fluid" alt=""/>
                 </Col>
             </Row>

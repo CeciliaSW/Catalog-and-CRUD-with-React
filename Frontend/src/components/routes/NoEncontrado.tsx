@@ -1,11 +1,27 @@
-import { useEffect} from "react";
-import { Container } from "react-bootstrap";
+import { useEffect, useState} from "react";
+import { Button, Container } from "react-bootstrap";
 import { gsap, Linear } from "gsap";
 import './scss/404.scss';
 import './scss/Espacios.scss';
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function NoEncontrado() {
+    const navigate = useNavigate();
+
+    const [isHovering, setIsHovering] = useState(false);
+
+    const handleMouseEnter = () => {
+    setIsHovering(true);
+    };
+
+    const handleMouseLeave = () => {
+    setIsHovering(false);
+    };
+
+    function irAProductos() {
+        navigate('/productos');
+    }
 
     gsap.config({
         nullTargetWarn: false
@@ -81,6 +97,10 @@ export default function NoEncontrado() {
                 <h1 className="second-four">4</h1>
                 <p className="wrong-para">¡Uh, oh! ¡Producto no encontrado!</p>
             </Container>
+
+            <div className="text-center" style={{marginTop:'-15%',paddingLeft: '4%'}}>
+                <Button className='btn shadow ' type="submit"  onClick={irAProductos}onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={{ background: 'linear-gradient(to right, rgba(102, 126, 234, 0.5), rgba(118, 75, 162, 0.5))', border:'none', color: isHovering ? 'white' : 'black'}}>Llévame de vuelta</Button>
+            </div>
         </>
     );
 }
